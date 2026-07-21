@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "babbling books"
+  navbar:
+    logo: images/logo.png
+    left:
+      - href: index.qmd
+        text: Home
+      - episodes.qmd
+    tools:
+      - icon: youtube
+        href: https://www.youtube.com
+      - icon: spotify
+        href: https://open.spotify.com
+      - icon: github
+        href: https://github.com/babblingbooks
+  page-footer:
+    center:
+      - text: "© 2026 babbling books"
+
+format:
+  html:
+    theme: cyborg
+    css: styles.css
+    toc: true

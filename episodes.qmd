@@ -1,0 +1,115 @@
+---
+title: "Episodes"
+toc: true
+---
+
+Welcome to the **babbling books** library! Here you'll find every episode we've released, what chapters we covered, and where to listen.
+
+## 🎙️ Available Episodes
+
+<div class="episode-grid">
+
+<div class="episode-card">
+
+### Episode 1
+
+## Project Hail Mary
+
+**Chapters Covered:** 1–5
+
+<div class="episode-links">
+  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+    <i class="bi bi-youtube"></i>
+  </a>
+
+  <a href="https://spotify.com" target="_blank" aria-label="Spotify">
+    <i class="bi bi-spotify"></i>
+  </a>
+</div>
+
+</div>
+
+<div class="episode-card">
+
+### Episode 2
+
+## Project Hail Mary
+
+**Chapters Covered:** 6–10
+
+<div class="episode-links">
+  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+    <i class="bi bi-youtube"></i>
+  </a>
+
+  <a href="https://spotify.com" target="_blank" aria-label="Spotify">
+    <i class="bi bi-spotify"></i>
+  </a>
+</div>
+</div>
+
+<div class="episode-card">
+
+### Episode 3
+
+## Project Hail Mary
+
+**Chapters Covered:** 11–15
+
+<div class="episode-links">
+  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+    <i class="bi bi-youtube"></i>
+  </a>
+
+  <a href="https://spotify.com" target="_blank" aria-label="Spotify">
+    <i class="bi bi-spotify"></i>
+  </a>
+</div>
+
+</div>
+
+</div>
+
+---
+
+## 🔮 Coming Soon
+
+<div class="episode-grid">
+
+<div class="episode-card upcoming">
+
+### Episode 4
+
+## Project Hail Mary
+
+**Planned Chapters:** 16–20
+
+*Coming soon!*
+
+</div>
+
+<div class="episode-card upcoming">
+
+### Episode 5
+
+## Project Hail Mary
+
+**Planned Chapters:** 21–25
+
+*Coming soon!*
+
+</div>
+
+<div class="episode-card upcoming">
+
+### Episode 6
+
+## Project Hail Mary
+
+**Planned Chapters:** 26–30
+
+*Coming soon!*
+
+</div>
+
+</div>

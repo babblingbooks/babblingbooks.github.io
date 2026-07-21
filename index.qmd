@@ -1,0 +1,19 @@
+---
+title: "Welcome to babbling books"
+page-layout: full
+---
+
+<div style="text-align: center; margin-top: 2rem;">
+
+![](images/logo.png){width=70%}
+
+
+</div>
+
+## About the Podcast
+
+**babbling books** is a book podcast hosted by two friends who read books together and then chat about them
+
+---
+
+*huzzah*

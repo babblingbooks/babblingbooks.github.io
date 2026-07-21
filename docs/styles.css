@@ -1,0 +1,81 @@
+/* Episode Grid */
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Released Episodes */
+
+.episode-card {
+    background: linear-gradient(180deg, #a63be5, #7b2cbf);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #b66af0;
+    box-shadow: 0 6px 16px rgba(0,0,0,.35);
+    transition: all .2s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.5);
+}
+
+.episode-card h2,
+.episode-card h3 {
+    color: white;
+}
+
+.episode-card h2 {
+    margin-bottom: .75rem;
+}
+
+.episode-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.episode-links a {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    font-size: 1.4rem;
+
+    transition: all .2s ease;
+}
+
+.episode-links a:hover {
+    background: white;
+    color: #7b2cbf;
+    transform: scale(1.1);
+}
+
+/* Upcoming Episodes */
+
+.episode-card.upcoming {
+    background: #222;
+    border: 2px solid #7b2cbf;
+    color: #ddd;
+}
+
+.episode-card.upcoming h2,
+.episode-card.upcoming h3 {
+    color: #c88cff;
+}
+
+.episode-card.upcoming:hover {
+    border-color: #b66af0;
+}
