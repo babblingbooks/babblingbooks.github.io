@@ -4,6 +4,7 @@ project:
 
 website:
   title: "babbling books"
+  favicon: images/logo.png
   navbar:
     logo: images/logo.png
     left:
