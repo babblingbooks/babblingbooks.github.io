@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  # Custom domain for GitHub Pages; copied into docs/ on every render
+  resources:
+    - CNAME
 
 website:
   title: "babbling books"
