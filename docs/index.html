@@ -30,29 +30,29 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-82713982c9f6fc81867602df792ba485.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-800e24cf644340bc3df7c3d6c05c05a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -74,111 +74,316 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-home .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-type','listing-season','listing-title','listing-series','listing-author','listing-chapters','listing-epilogue','listing-premiere','listing-cover','listing-episode','listing-released','listing-length','listing-spotify','listing-youtube','listing-tag',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-type","listing-season","listing-title","listing-series","listing-author","listing-chapters","listing-epilogue","listing-premiere","listing-cover","listing-episode","listing-released","listing-length","listing-spotify","listing-youtube","listing-tag"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-home'] = new List('listing-home', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,800&amp;display=swap" rel="stylesheet">
+<meta name="theme-color" content="#120c18">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="babbling books">
+<meta property="og:site_name" content="babbling books">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.png" alt="" class="navbar-logo light-content">
-    <img src="./images/logo.png" alt="" class="navbar-logo dark-content">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">babbling books</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./episodes.html"> 
-<span class="menu-text">Episodes</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools tools-wide">
-    <a href="https://www.youtube.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-youtube"></i></a>
-    <a href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-spotify"></i></a>
-    <a href="https://www.tiktok.com/@babblingbooksclip" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-tiktok"></i></a>
-    <a href="https://github.com/babblingbooks" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<a class="skip-link" href="#quarto-document-content">Skip to content</a>
+<header class="appbar">
+  <div class="appbar__inner">
+    <a class="appbar__brand" href="index.html">
+      <img src="images/logo.png" alt="" width="36" height="36">
+      <span>babbling books</span>
+    </a>
+    <nav class="appbar__nav" aria-label="Main">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="episodes.html" data-nav="episodes">Episodes</a>
+    </nav>
+    <div class="appbar__social">
+      <a href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener" aria-label="Spotify"><i class="bi bi-spotify"></i></a>
+      <a href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+      <!-- YouTube channel not live yet; swap in the real URL once it is -->
+      <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      <a href="https://github.com/babblingbooks" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    </div>
+  </div>
+</header>
 
 
 
 
-<div class="hero">
-<p><img src="images/logo.png" class="hero-logo img-fluid" alt="babbling books logo: two friends toasting with mead and wine over a stack of books"></p>
-<p><span class="hero-tagline">A book club podcast hosted by two best friends who read books together and then chat about them.</span></p>
-<p><span class="schedule-pill"><i class="bi bi-calendar-heart"></i> New episodes every <strong>Sunday at 9pm</strong></span></p>
-<div class="hero-buttons">
-<p><a class="btn-pill btn-spotify" href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Listen on Spotify</a> <a class="btn-pill btn-outline" href="episodes.html"><i class="bi bi-collection-play"></i> All episodes</a></p>
-</div>
-</div>
-<div class="home-grid">
-<div class="panel up-next">
-<p><span class="eyebrow">Up next · Season 2</span></p>
-<section id="house-of-earth-and-blood" class="level2">
-<h2 class="anchored" data-anchor-id="house-of-earth-and-blood">House of Earth and Blood</h2>
-<p><span class="book-meta">Crescent City #1 · Sarah J. Maas</span></p>
-<p>We’re trading spaceships for Crescent City. Grab a copy and read along with us!</p>
-<p><span class="premiere"><i class="bi bi-stars"></i> Premieres <strong>Sunday, October 18, 2026</strong> at 9pm</span></p>
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <img class="hero__logo" src="images/logo.png" alt="babbling books logo: two friends toasting with mead and wine over a stack of books">
+  <h1 class="hero__title">Two best friends.<br>One book.<br><em>So much babbling.</em></h1>
+  <p class="hero__sub">A book club podcast with best friends Hannah and Patty. We read a few chapters at a time, then sit down and talk about everything that happened.</p>
+  <span class="chip"><i class="bi bi-moon-stars-fill"></i> New episodes every Sunday · 9pm</span>
+  <div class="hero__actions">
+    <a class="btn btn--primary" href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Listen on Spotify</a>
+    <a class="btn btn--ghost" href="episodes.html"><i class="bi bi-collection-play"></i> Browse episodes</a>
+  </div>
 </section>
-</div>
-<div class="panel">
-<p><span class="eyebrow">Latest episode</span></p>
-<section id="project-hail-mary-season-finale" class="level2">
-<h2 class="anchored" data-anchor-id="project-hail-mary-season-finale">Project Hail Mary: Season Finale</h2>
-<p>Chapters 26–30. The Season 1 finale, where we wrap up Andy Weir’s <em>Project Hail Mary</em>.</p>
-<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1G4gTejPakymYZiw5Jz3Gz?utm_source=generator&amp;theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Project Hail Mary Season Finale">
-</iframe>
+<div id="listing-home" class="quarto-listing quarto-listing-container-custom">
+
+<section class="wrap block">
+  <article class="feature">
+    
+  <div class="book book--crescent book--lg" aria-hidden="true">
+    <div class="book__face">
+      <span class="book__series">Crescent City #1</span>
+      <span class="book__title">House of Earth and Blood</span>
+      <span class="book__author">Sarah J. Maas</span>
+    </div>
+  </div>
+    <div class="feature__body">
+      <span class="eyebrow">Up next · Season 2</span>
+      <h2 class="feature__title">House of Earth and Blood</h2>
+      <p class="byline">Crescent City #1 · Sarah J. Maas</p>
+      
+      <p class="feature__text">Our next book club pick! Grab a copy, get a head start, and read along with us.</p>
+      <div class="premiere">
+        <i class="bi bi-moon-stars-fill"></i>
+        <span>Premieres <strong>Sunday, October 18</strong> at 9pm</span>
+        <span class="countdown" data-premiere="2026-10-18"></span>
+      </div>
+      
+    </div>
+  </article>
 </section>
-</div>
-</div>
-<section id="help-us-pick-the-next-read" class="level2 panel tiktok-cta">
-<h2 class="anchored" data-anchor-id="help-us-pick-the-next-read"><i class="bi bi-tiktok"></i> Help us pick the next read</h2>
-<p>Got a book you’re dying for us to babble about? Tell us in the comments on our TikTok. We read every suggestion!</p>
-<p><a class="btn-pill btn-tiktok" href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i> @babblingbooksclip</a></p>
+
+<section class="wrap block">
+  <div class="block__head">
+    <h2 class="block__title">Latest episode</h2>
+  </div>
+  <article class="latest">
+    <div class="latest__num" aria-hidden="true"><span>S1</span>E5</div>
+    <div class="latest__body">
+      <div class="tags">
+        <span class="tag tag--book">Project Hail Mary</span>
+        <span class="tag">Season Finale</span>
+      </div>
+      <h3 class="latest__title">Chapters 26–30</h3>
+      <p class="meta"><i class="bi bi-calendar3"></i> Sep 8, 2026 <span class="dot">·</span> <i class="bi bi-clock"></i> 41 min</p>
+      <div class="chapbar" style="--from:83.3%;--to:100.0%" title="Chapters 26–30"><span></span></div>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://open.spotify.com/episode/1G4gTejPakymYZiw5Jz3Gz" target="_blank" rel="noopener"><i class="bi bi-play-fill"></i> Play on Spotify</a>
+        
+      </div>
+    </div>
+  </article>
 </section>
-<div class="signoff">
-<p><em>huzzah</em></p>
+
+<section class="wrap block">
+  <div class="block__head">
+    <h2 class="block__title">Season 1: Project Hail Mary</h2>
+    <a class="block__link" href="episodes.html">See all <i class="bi bi-arrow-right"></i></a>
+  </div>
+  <div class="shelf" role="list">
+    
+    <a class="shelf-card" role="listitem" href="https://open.spotify.com/episode/2AwelFVjyOvqOoG0yt82pK" target="_blank" rel="noopener" aria-label="Play Season 1 Episode 1, Chapters 1–5, on Spotify">
+      <div class="shelf-card__top">
+        <span class="shelf-card__num">E1</span>
+        
+      </div>
+      <h3 class="shelf-card__title">Chapters 1–5</h3>
+      <p class="meta">Aug 4, 2026 <span class="dot">·</span> 49 min</p>
+      <div class="chapbar" style="--from:0.0%;--to:16.7%" title="Chapters 1–5"><span></span></div>
+      <span class="shelf-card__play"><i class="bi bi-play-fill"></i> Play</span>
+    </a>
+    
+    <a class="shelf-card" role="listitem" href="https://open.spotify.com/episode/0VSeDnKjhXtsomz73nZ3Dj" target="_blank" rel="noopener" aria-label="Play Season 1 Episode 2, Chapters 6–10, on Spotify">
+      <div class="shelf-card__top">
+        <span class="shelf-card__num">E2</span>
+        
+      </div>
+      <h3 class="shelf-card__title">Chapters 6–10</h3>
+      <p class="meta">Aug 9, 2026 <span class="dot">·</span> 44 min</p>
+      <div class="chapbar" style="--from:16.7%;--to:33.3%" title="Chapters 6–10"><span></span></div>
+      <span class="shelf-card__play"><i class="bi bi-play-fill"></i> Play</span>
+    </a>
+    
+    <a class="shelf-card" role="listitem" href="https://open.spotify.com/episode/1XZBuZaDdNiqMOVHID3WQf" target="_blank" rel="noopener" aria-label="Play Season 1 Episode 3, Chapters 11–15, on Spotify">
+      <div class="shelf-card__top">
+        <span class="shelf-card__num">E3</span>
+        
+      </div>
+      <h3 class="shelf-card__title">Chapters 11–15</h3>
+      <p class="meta">Aug 16, 2026 <span class="dot">·</span> 44 min</p>
+      <div class="chapbar" style="--from:33.3%;--to:50.0%" title="Chapters 11–15"><span></span></div>
+      <span class="shelf-card__play"><i class="bi bi-play-fill"></i> Play</span>
+    </a>
+    
+    <a class="shelf-card" role="listitem" href="https://open.spotify.com/episode/5jZBbvpASbN0SZAQuBpgRu" target="_blank" rel="noopener" aria-label="Play Season 1 Episode 4, Chapters 16–25, on Spotify">
+      <div class="shelf-card__top">
+        <span class="shelf-card__num">E4</span>
+        <span class="tag">Megasode</span>
+      </div>
+      <h3 class="shelf-card__title">Chapters 16–25</h3>
+      <p class="meta">Aug 31, 2026 <span class="dot">·</span> 48 min</p>
+      <div class="chapbar" style="--from:50.0%;--to:83.3%" title="Chapters 16–25"><span></span></div>
+      <span class="shelf-card__play"><i class="bi bi-play-fill"></i> Play</span>
+    </a>
+    
+    <a class="shelf-card" role="listitem" href="https://open.spotify.com/episode/1G4gTejPakymYZiw5Jz3Gz" target="_blank" rel="noopener" aria-label="Play Season 1 Episode 5, Chapters 26–30, on Spotify">
+      <div class="shelf-card__top">
+        <span class="shelf-card__num">E5</span>
+        <span class="tag">Season Finale</span>
+      </div>
+      <h3 class="shelf-card__title">Chapters 26–30</h3>
+      <p class="meta">Sep 8, 2026 <span class="dot">·</span> 41 min</p>
+      <div class="chapbar" style="--from:83.3%;--to:100.0%" title="Chapters 26–30"><span></span></div>
+      <span class="shelf-card__play"><i class="bi bi-play-fill"></i> Play</span>
+    </a>
+    
+  </div>
+</section>
+
+<div class="listing-no-matching d-none">No matching items</div>
 </div>
+<section class="wrap block">
+  <div class="block__head">
+    <h2 class="block__title">Meet the hosts</h2>
+  </div>
+  <div class="hosts">
+    <article class="host">
+      <div class="host__badge" aria-hidden="true">H</div>
+      <div>
+        <h3 class="host__name">Hannah</h3>
+        <span class="host__role">Co-host</span>
+        <p class="host__bio">A line about Hannah goes here: favourite genre, comfort read, hot take…</p>
+      </div>
+    </article>
+    <article class="host host--alt">
+      <div class="host__badge" aria-hidden="true">P</div>
+      <div>
+        <h3 class="host__name">Patty</h3>
+        <span class="host__role">Co-host</span>
+        <p class="host__bio">A line about Patty goes here: favourite genre, comfort read, hot take…</p>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="wrap block">
+  <div class="tiktok">
+    <div class="tiktok__bubble" aria-hidden="true">“you HAVE to read…”</div>
+    <h2 class="tiktok__title">Pick our next read</h2>
+    <p>Drop your book suggestions in the comments on our TikTok. Your pick could be next season's book!</p>
+    <a class="btn btn--light" href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i> @babblingbooksclip</a>
+  </div>
+  <p class="signoff">huzzah</p>
+</section>
 
 
 
-</main> <!-- /main -->
+
+
+<footer class="site-footer">
+  <img src="images/logo.png" alt="" width="72" height="72">
+  <p class="site-footer__name">babbling books</p>
+  <p class="site-footer__when">New episodes every Sunday at 9pm</p>
+  <div class="site-footer__social">
+    <a href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener" aria-label="Spotify"><i class="bi bi-spotify"></i></a>
+    <a href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+    <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://github.com/babblingbooks" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+  </div>
+  <p class="site-footer__fine">© 2026 babbling books</p>
+</footer>
+
+<!-- Phone/tablet tab bar -->
+<nav class="tabbar" aria-label="Main">
+  <a href="index.html" data-nav="home"><i class="bi bi-house-heart-fill"></i><span>Home</span></a>
+  <a href="episodes.html" data-nav="episodes"><i class="bi bi-collection-play-fill"></i><span>Episodes</span></a>
+  <a href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i><span>Listen</span></a>
+  <a href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i><span>TikTok</span></a>
+</nav>
+
+<script>
+  // Highlight the current page in both navs
+  (function () {
+    var page = /episodes(\.html)?$/.test(location.pathname) ? 'episodes' : 'home';
+    document.querySelectorAll('[data-nav="' + page + '"]').forEach(function (a) {
+      a.setAttribute('aria-current', 'page');
+    });
+  })();
+
+  // "in 10 days" / "tomorrow" / "tonight" next to premiere dates; hidden once it's out
+  (function () {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    document.querySelectorAll('.countdown[data-premiere]').forEach(function (el) {
+      var p = el.dataset.premiere.split('-').map(Number);
+      var days = Math.round((new Date(p[0], p[1] - 1, p[2]) - today) / 86400000);
+      if (days < 0) return el.remove();
+      el.textContent = days === 0 ? 'Tonight!' : days === 1 ? 'Tomorrow!' : 'in ' + days + ' days';
+    });
+  })();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    const icon = "";
-    const anchorJS = new window.AnchorJS();
-    anchorJS.options = {
-      placement: 'right',
-      icon: icon
-    };
-    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
@@ -243,7 +448,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/babbling-books\.com");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -571,48 +776,6 @@ ul.task-list li input[type="checkbox"] {
   });
   </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
- © 2026 babbling books · new episodes every Sunday at 9pm
-  </li>  
-</ul>
-    </div>
-    <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy">
-      <i class="bi bi-spotify" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://www.tiktok.com/@babblingbooksclip">
-      <i class="bi bi-tiktok" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com">
-      <i class="bi bi-youtube" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/babblingbooks">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
-  </div>
-</footer>
 
 
 

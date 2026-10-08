@@ -1,0 +1,100 @@
+<%
+// Episodes page built from episodes.yml: stats, then every season with its episodes
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const ymd = (s) => String(s).split('-').map(Number);
+const fmtDate = (s) => { const [y, m, d] = ymd(s); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const fmtLong = (s) => { const [y, m, d] = ymd(s); return `${DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]}, ${MONTHS_LONG[m - 1]} ${d}`; };
+const fmtTotal = (min) => min >= 60 ? `${Math.floor(min / 60)}h ${min % 60}m` : `${min}m`;
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const seasons = items.filter((i) => i.type === 'season').sort((a, b) => b.season - a.season);
+const released = items.filter((i) => i.type === 'episode' && i.spotify);
+const epsOf = (n) => released.filter((e) => e.season === n).sort((a, b) => a.episode - b.episode);
+// An epilogue counts as one extra chapter at the end of the bar
+const bookLength = (s) => (s.chapters || 0) + (s.epilogue ? 1 : 0);
+const lastCh = (e, total) => e.chapters[1] === 'epilogue' ? total : e.chapters[1];
+const totalOf = (s) => bookLength(s) || Math.max(0, ...epsOf(s.season).map((e) => e.chapters ? lastCh(e, 0) : 0));
+const isFinished = (s) => bookLength(s) > 0 && epsOf(s.season).some((e) => e.chapters && lastCh(e, bookLength(s)) >= bookLength(s));
+const chapterLabel = (s) => s.chapters ? `${s.chapters} chapters${s.epilogue ? ' + epilogue' : ''}` : '';
+
+const book = (s, size) => `
+  <div class="book book--${esc(s.cover || 'plain')} book--${size}" aria-hidden="true">
+    <div class="book__face">
+      ${s.series ? `<span class="book__series">${esc(s.series)}</span>` : ''}
+      <span class="book__title">${esc(s.title)}</span>
+      <span class="book__author">${esc(s.author)}</span>
+    </div>
+  </div>`;
+
+const chapbar = (e, total) => {
+  if (!e.chapters || !total) return '';
+  const from = ((e.chapters[0] - 1) / total) * 100;
+  const to = (lastCh(e, total) / total) * 100;
+  return `<div class="chapbar" style="--from:${from.toFixed(1)}%;--to:${to.toFixed(1)}%" title="Chapters ${e.chapters[0]}–${e.chapters[1]}"><span></span></div>`;
+};
+
+const totalMinutes = released.reduce((sum, e) => sum + (e.length || 0), 0);
+const booksFinished = seasons.filter(isFinished).length;
+%>
+```{=html}
+
+<div class="wrap">
+  <dl class="stats">
+    <div class="stat"><dt>Episodes</dt><dd><%- released.length %></dd></div>
+    <div class="stat"><dt>Of babbling</dt><dd><%- fmtTotal(totalMinutes) %></dd></div>
+    <div class="stat"><dt>Books finished</dt><dd><%- booksFinished %></dd></div>
+  </dl>
+
+  <% for (const s of seasons) {
+       const eps = epsOf(s.season);
+       const total = totalOf(s);
+       const status = isFinished(s) ? 'Complete' : eps.length ? 'Now reading' : 'Coming soon'; %>
+  <section class="season" id="season-<%- s.season %>">
+    <header class="season__head">
+      <%= book(s, 'md') %>
+      <div>
+        <span class="eyebrow">Season <%- s.season %> · <%- status %></span>
+        <h2 class="season__title"><%- s.title %></h2>
+        <p class="byline"><%- [s.series, s.author].filter(Boolean).join(' · ') %></p>
+        <% const metaBits = [];
+           if (eps.length) metaBits.push(`${eps.length} episode${eps.length === 1 ? '' : 's'}`, fmtTotal(eps.reduce((m, e) => m + (e.length || 0), 0)));
+           if (chapterLabel(s)) metaBits.push(chapterLabel(s));
+           if (metaBits.length) { %>
+        <p class="meta"><%= metaBits.map(esc).join(' <span class="dot">·</span> ') %></p>
+        <% } %>
+      </div>
+    </header>
+
+    <% if (!eps.length && s.premiere) { %>
+    <div class="ep ep--soon">
+      <div class="ep__num" aria-hidden="true">E1</div>
+      <div class="ep__body">
+        <h3 class="ep__title">First episode drops <%- fmtLong(s.premiere) %></h3>
+        <p class="meta"><i class="bi bi-moon-stars-fill"></i> 9pm <span class="countdown" data-premiere="<%- s.premiere %>"></span></p>
+      </div>
+    </div>
+    <% } %>
+
+    <ol class="ep-list">
+      <% for (const e of eps) { %>
+      <li class="ep">
+        <div class="ep__num" aria-hidden="true">E<%- e.episode %></div>
+        <div class="ep__body">
+          <% if (e.tag) { %><span class="tag"><%- e.tag %></span><% } %>
+          <h3 class="ep__title"><span class="visually-hidden">Episode <%- e.episode %>: </span><%- e.title %></h3>
+          <p class="meta"><%- fmtDate(e.released) %> <span class="dot">·</span> <%- e.length %> min</p>
+          <%= chapbar(e, total) %>
+        </div>
+        <div class="ep__actions">
+          <a class="play" href="<%- e.spotify %>" target="_blank" rel="noopener" aria-label="Play episode <%- e.episode %> on Spotify"><i class="bi bi-play-fill"></i></a>
+          <% if (e.youtube) { %><a class="play play--alt" href="<%- e.youtube %>" target="_blank" rel="noopener" aria-label="Watch episode <%- e.episode %> on YouTube"><i class="bi bi-youtube"></i></a><% } %>
+        </div>
+      </li>
+      <% } %>
+    </ol>
+  </section>
+  <% } %>
+</div>
+```

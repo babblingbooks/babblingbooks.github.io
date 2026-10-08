@@ -7,39 +7,18 @@ project:
 
 website:
   title: "babbling books"
-  description: "A book club podcast hosted by two best friends. New episodes every Sunday at 9pm."
+  description: "A book club podcast with best friends Hannah and Patty. New episodes every Sunday at 9pm."
   favicon: images/logo.png
-  navbar:
-    logo: images/logo.png
-    left:
-      - href: index.qmd
-        text: Home
-      - episodes.qmd
-    tools:
-      # YouTube channel not live yet; swap in the real URL once it is
-      - icon: youtube
-        href: https://www.youtube.com
-      - icon: spotify
-        href: https://open.spotify.com/show/033YEov0pxocKKkEwuywsy
-      - icon: tiktok
-        href: https://www.tiktok.com/@babblingbooksclip
-      - icon: github
-        href: https://github.com/babblingbooks
-  page-footer:
-    center:
-      - text: "© 2026 babbling books · new episodes every Sunday at 9pm"
-    right:
-      - icon: spotify
-        href: https://open.spotify.com/show/033YEov0pxocKKkEwuywsy
-      - icon: tiktok
-        href: https://www.tiktok.com/@babblingbooksclip
-      - icon: youtube
-        href: https://www.youtube.com
-      - icon: github
-        href: https://github.com/babblingbooks
+  site-url: https://babbling-books.com
+  open-graph: true
 
 format:
   html:
-    theme: [cyborg, theme.scss]
+    theme: [default, theme.scss]
     css: styles.css
-    toc: true
+    page-layout: custom
+    toc: false
+    anchor-sections: false
+    include-in-header: _partials/head.html
+    include-before-body: _partials/header.html
+    include-after-body: _partials/footer.html

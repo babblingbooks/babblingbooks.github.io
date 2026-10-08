@@ -1,0 +1,111 @@
+<%
+// Home page sections built from episodes.yml: up next, latest episode, season shelf
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const ymd = (s) => String(s).split('-').map(Number);
+const fmtDate = (s) => { const [y, m, d] = ymd(s); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+const fmtLong = (s) => { const [y, m, d] = ymd(s); return `${DAYS[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]}, ${MONTHS_LONG[m - 1]} ${d}`; };
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+const seasons = items.filter((i) => i.type === 'season').sort((a, b) => b.season - a.season);
+const released = items.filter((i) => i.type === 'episode' && i.spotify)
+  .sort((a, b) => String(b.released).localeCompare(String(a.released)));
+const seasonOf = (n) => seasons.find((s) => s.season === n) || {};
+const epsOf = (n) => released.filter((e) => e.season === n).sort((a, b) => a.episode - b.episode);
+
+const book = (s, size) => `
+  <div class="book book--${esc(s.cover || 'plain')} book--${size}" aria-hidden="true">
+    <div class="book__face">
+      ${s.series ? `<span class="book__series">${esc(s.series)}</span>` : ''}
+      <span class="book__title">${esc(s.title)}</span>
+      <span class="book__author">${esc(s.author)}</span>
+    </div>
+  </div>`;
+
+// An epilogue counts as one extra chapter at the end of the bar
+const bookLength = (s) => (s.chapters || 0) + (s.epilogue ? 1 : 0);
+const lastCh = (e, total) => e.chapters[1] === 'epilogue' ? total : e.chapters[1];
+
+const chapbar = (e) => {
+  if (!e.chapters) return '';
+  const total = bookLength(seasonOf(e.season)) || Math.max(...epsOf(e.season).map((x) => x.chapters ? lastCh(x, 0) : 0));
+  const from = ((e.chapters[0] - 1) / total) * 100;
+  const to = (lastCh(e, total) / total) * 100;
+  return `<div class="chapbar" style="--from:${from.toFixed(1)}%;--to:${to.toFixed(1)}%" title="Chapters ${e.chapters[0]}–${e.chapters[1]}"><span></span></div>`;
+};
+
+const current = seasons[0];
+const latest = released[0];
+const shelfSeason = latest ? seasonOf(latest.season) : null;
+%>
+```{=html}
+
+<% if (current) { const started = epsOf(current.season).length > 0; %>
+<section class="wrap block">
+  <article class="feature">
+    <%= book(current, 'lg') %>
+    <div class="feature__body">
+      <span class="eyebrow"><%- started ? 'Now reading' : 'Up next' %> · Season <%- current.season %></span>
+      <h2 class="feature__title"><%- current.title %></h2>
+      <p class="byline"><%- [current.series, current.author].filter(Boolean).join(' · ') %></p>
+      <% if (current.premiere && !started) { %>
+      <p class="feature__text">Our next book club pick! Grab a copy, get a head start, and read along with us.</p>
+      <div class="premiere">
+        <i class="bi bi-moon-stars-fill"></i>
+        <span>Premieres <strong><%- fmtLong(current.premiere) %></strong> at 9pm</span>
+        <span class="countdown" data-premiere="<%- current.premiere %>"></span>
+      </div>
+      <% } %>
+    </div>
+  </article>
+</section>
+<% } %>
+
+<% if (latest) { const s = seasonOf(latest.season); %>
+<section class="wrap block">
+  <div class="block__head">
+    <h2 class="block__title">Latest episode</h2>
+  </div>
+  <article class="latest">
+    <div class="latest__num" aria-hidden="true"><span>S<%- latest.season %></span>E<%- latest.episode %></div>
+    <div class="latest__body">
+      <div class="tags">
+        <span class="tag tag--book"><%- s.title %></span>
+        <% if (latest.tag) { %><span class="tag"><%- latest.tag %></span><% } %>
+      </div>
+      <h3 class="latest__title"><%- latest.title %></h3>
+      <p class="meta"><i class="bi bi-calendar3"></i> <%- fmtDate(latest.released) %> <span class="dot">·</span> <i class="bi bi-clock"></i> <%- latest.length %> min</p>
+      <%= chapbar(latest) %>
+      <div class="actions">
+        <a class="btn btn--primary" href="<%- latest.spotify %>" target="_blank" rel="noopener"><i class="bi bi-play-fill"></i> Play on Spotify</a>
+        <% if (latest.youtube) { %><a class="btn btn--ghost" href="<%- latest.youtube %>" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> Watch</a><% } %>
+      </div>
+    </div>
+  </article>
+</section>
+<% } %>
+
+<% if (shelfSeason) { const eps = epsOf(shelfSeason.season); %>
+<section class="wrap block">
+  <div class="block__head">
+    <h2 class="block__title">Season <%- shelfSeason.season %>: <%- shelfSeason.title %></h2>
+    <a class="block__link" href="episodes.html">See all <i class="bi bi-arrow-right"></i></a>
+  </div>
+  <div class="shelf" role="list">
+    <% for (const e of eps) { %>
+    <a class="shelf-card" role="listitem" href="<%- e.spotify %>" target="_blank" rel="noopener" aria-label="Play Season <%- e.season %> Episode <%- e.episode %>, <%- e.title %>, on Spotify">
+      <div class="shelf-card__top">
+        <span class="shelf-card__num">E<%- e.episode %></span>
+        <% if (e.tag) { %><span class="tag"><%- e.tag %></span><% } %>
+      </div>
+      <h3 class="shelf-card__title"><%- e.title %></h3>
+      <p class="meta"><%- fmtDate(e.released) %> <span class="dot">·</span> <%- e.length %> min</p>
+      <%= chapbar(e) %>
+      <span class="shelf-card__play"><i class="bi bi-play-fill"></i> Play</span>
+    </a>
+    <% } %>
+  </div>
+</section>
+<% } %>
+```

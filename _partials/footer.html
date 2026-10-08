@@ -1,0 +1,42 @@
+<footer class="site-footer">
+  <img src="images/logo.png" alt="" width="72" height="72">
+  <p class="site-footer__name">babbling books</p>
+  <p class="site-footer__when">New episodes every Sunday at 9pm</p>
+  <div class="site-footer__social">
+    <a href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener" aria-label="Spotify"><i class="bi bi-spotify"></i></a>
+    <a href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+    <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="https://github.com/babblingbooks" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+  </div>
+  <p class="site-footer__fine">© 2026 babbling books</p>
+</footer>
+
+<!-- Phone/tablet tab bar -->
+<nav class="tabbar" aria-label="Main">
+  <a href="index.html" data-nav="home"><i class="bi bi-house-heart-fill"></i><span>Home</span></a>
+  <a href="episodes.html" data-nav="episodes"><i class="bi bi-collection-play-fill"></i><span>Episodes</span></a>
+  <a href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i><span>Listen</span></a>
+  <a href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i><span>TikTok</span></a>
+</nav>
+
+<script>
+  // Highlight the current page in both navs
+  (function () {
+    var page = /episodes(\.html)?$/.test(location.pathname) ? 'episodes' : 'home';
+    document.querySelectorAll('[data-nav="' + page + '"]').forEach(function (a) {
+      a.setAttribute('aria-current', 'page');
+    });
+  })();
+
+  // "in 10 days" / "tomorrow" / "tonight" next to premiere dates; hidden once it's out
+  (function () {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    document.querySelectorAll('.countdown[data-premiere]').forEach(function (el) {
+      var p = el.dataset.premiere.split('-').map(Number);
+      var days = Math.round((new Date(p[0], p[1] - 1, p[2]) - today) / 86400000);
+      if (days < 0) return el.remove();
+      el.textContent = days === 0 ? 'Tonight!' : days === 1 ? 'Tomorrow!' : 'in ' + days + ' days';
+    });
+  })();
+</script>

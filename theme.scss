@@ -1,16 +1,11 @@
 /*-- scss:defaults --*/
 
-// Pull the cyborg theme toward the logo's palette: lavender, burgundy, gold
-$primary: #a63be5;
-$secondary: #7b2cbf;
-$link-color: #c88cff;
+// Candlelit tavern palette, pulled from the logo
+$body-bg: #120c18;
+$body-color: #e9dfef;
+$primary: #8e3fd0;
+$link-color: #d7b4ff;
 $link-hover-color: #e9c46a;
-$navbar-bg: #140d1c;
-$footer-bg: #140d1c;
-$body-bg: #0f0a14;
-
-/*-- scss:rules --*/
-
-h1, h2, h3, .navbar-title, .title {
-  font-family: "Fraunces", Georgia, serif;
-}
+$font-family-sans-serif: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Fraunces", Georgia, serif;
+$headings-color: #f3e5c8;

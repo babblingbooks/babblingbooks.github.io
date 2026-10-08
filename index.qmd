@@ -1,58 +1,63 @@
 ---
 pagetitle: "babbling books"
-page-layout: full
-toc: false
+listing:
+  id: home
+  contents: episodes.yml
+  template: _templates/home.ejs
+  sort: false
 ---
 
-::: {.hero}
+```{=html}
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <img class="hero__logo" src="images/logo.png" alt="babbling books logo: two friends toasting with mead and wine over a stack of books">
+  <h1 class="hero__title">Two best friends.<br>One book.<br><em>So much babbling.</em></h1>
+  <p class="hero__sub">A book club podcast with best friends Hannah and Patty. We read a few chapters at a time, then sit down and talk about everything that happened.</p>
+  <span class="chip"><i class="bi bi-moon-stars-fill"></i> New episodes every Sunday · 9pm</span>
+  <div class="hero__actions">
+    <a class="btn btn--primary" href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Listen on Spotify</a>
+    <a class="btn btn--ghost" href="episodes.html"><i class="bi bi-collection-play"></i> Browse episodes</a>
+  </div>
+</section>
+```
 
-![](images/logo.png){.hero-logo fig-alt="babbling books logo: two friends toasting with mead and wine over a stack of books"}
-
-[A book club podcast hosted by two best friends who read books together and then chat about them.]{.hero-tagline}
-
-[<i class="bi bi-calendar-heart"></i> New episodes every **Sunday at 9pm**]{.schedule-pill}
-
-::: {.hero-buttons}
-<a class="btn-pill btn-spotify" href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Listen on Spotify</a>
-<a class="btn-pill btn-outline" href="episodes.html"><i class="bi bi-collection-play"></i> All episodes</a>
+::: {#home}
 :::
 
-:::
+```{=html}
+<section class="wrap block">
+  <div class="block__head">
+    <h2 class="block__title">Meet the hosts</h2>
+  </div>
+  <div class="hosts">
+    <article class="host">
+      <div class="host__badge" aria-hidden="true">H</div>
+      <div>
+        <h3 class="host__name">Hannah</h3>
+        <span class="host__role">Co-host</span>
+        <p class="host__bio">A line about Hannah goes here: favourite genre, comfort read, hot take…</p>
+      </div>
+    </article>
+    <article class="host host--alt">
+      <div class="host__badge" aria-hidden="true">P</div>
+      <div>
+        <h3 class="host__name">Patty</h3>
+        <span class="host__role">Co-host</span>
+        <p class="host__bio">A line about Patty goes here: favourite genre, comfort read, hot take…</p>
+      </div>
+    </article>
+  </div>
+</section>
+```
 
-::: {.home-grid}
-
-::: {.panel .up-next}
-[Up next · Season 2]{.eyebrow}
-
-## House of Earth and Blood
-
-[Crescent City #1 · Sarah J. Maas]{.book-meta}
-
-We're trading spaceships for Crescent City. Grab a copy and read along with us!
-
-[<i class="bi bi-stars"></i> Premieres **Sunday, October 18, 2026** at 9pm]{.premiere}
-:::
-
-::: {.panel}
-[Latest episode]{.eyebrow}
-
-## Project Hail Mary: Season Finale
-
-Chapters 26–30. The Season 1 finale, where we wrap up Andy Weir's *Project Hail Mary*.
-
-<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1G4gTejPakymYZiw5Jz3Gz?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Project Hail Mary Season Finale"></iframe>
-:::
-
-:::
-
-::: {.panel .tiktok-cta}
-## <i class="bi bi-tiktok"></i> Help us pick the next read
-
-Got a book you're dying for us to babble about? Tell us in the comments on our TikTok. We read every suggestion!
-
-<a class="btn-pill btn-tiktok" href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i> \@babblingbooksclip</a>
-:::
-
-::: {.signoff}
-*huzzah*
-:::
+```{=html}
+<section class="wrap block">
+  <div class="tiktok">
+    <div class="tiktok__bubble" aria-hidden="true">“you HAVE to read…”</div>
+    <h2 class="tiktok__title">Pick our next read</h2>
+    <p>Drop your book suggestions in the comments on our TikTok. Your pick could be next season's book!</p>
+    <a class="btn btn--light" href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i> @babblingbooksclip</a>
+  </div>
+  <p class="signoff">huzzah</p>
+</section>
+```

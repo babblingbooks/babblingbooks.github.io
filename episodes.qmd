@@ -1,105 +1,20 @@
 ---
-title: "Episodes"
-toc: true
+pagetitle: "Episodes · babbling books"
+description: "Every babbling books episode: which chapters we covered, when it came out, and where to listen."
+listing:
+  id: library
+  contents: episodes.yml
+  template: _templates/library.ejs
+  sort: false
 ---
 
-Welcome to the **babbling books** library! Here you'll find every episode we've released, which chapters we covered, and where to listen. New episodes drop every **Sunday at 9pm**.
+```{=html}
+<section class="wrap page-head">
+  <span class="eyebrow">The library</span>
+  <h1 class="page-head__title">Every episode</h1>
+  <p class="page-head__sub">Every chapter we've covered, newest season first. New episodes drop every <strong>Sunday at 9pm</strong>.</p>
+</section>
+```
 
-## 🔮 Season 2: House of Earth and Blood
-
-::: {.episode-card .upcoming}
-[Premieres Sunday, October 18, 2026 · 9pm]{.badge-soft}
-
-### House of Earth and Blood
-
-[Crescent City #1 · Sarah J. Maas]{.book-meta}
-
-Our second book club pick! Start reading now and catch up with us on premiere night.
+::: {#library}
 :::
-
-## 🚀 Season 1: Project Hail Mary
-
-[Andy Weir · 5 episodes · complete]{.book-meta}
-
-::: {.episode-grid}
-
-::: {.episode-card}
-[S1 · E1]{.ep-num}
-
-### Chapters 1–5
-
-[Aug 4, 2026 · 49 min]{.ep-meta}
-
-<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/2AwelFVjyOvqOoG0yt82pK?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 1"></iframe>
-
-::: {.episode-links}
-<a href="https://open.spotify.com/episode/2AwelFVjyOvqOoG0yt82pK" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
-<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
-:::
-:::
-
-::: {.episode-card}
-[S1 · E2]{.ep-num}
-
-### Chapters 6–10
-
-[Aug 9, 2026 · 44 min]{.ep-meta}
-
-<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/0VSeDnKjhXtsomz73nZ3Dj?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 2"></iframe>
-
-::: {.episode-links}
-<a href="https://open.spotify.com/episode/0VSeDnKjhXtsomz73nZ3Dj" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
-<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
-:::
-:::
-
-::: {.episode-card}
-[S1 · E3]{.ep-num}
-
-### Chapters 11–15
-
-[Aug 16, 2026 · 44 min]{.ep-meta}
-
-<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1XZBuZaDdNiqMOVHID3WQf?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 3"></iframe>
-
-::: {.episode-links}
-<a href="https://open.spotify.com/episode/1XZBuZaDdNiqMOVHID3WQf" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
-<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
-:::
-:::
-
-::: {.episode-card}
-[S1 · E4]{.ep-num} [Megasode]{.ep-tag}
-
-### Chapters 16–25
-
-[Aug 31, 2026 · 48 min]{.ep-meta}
-
-<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/5jZBbvpASbN0SZAQuBpgRu?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 4"></iframe>
-
-::: {.episode-links}
-<a href="https://open.spotify.com/episode/5jZBbvpASbN0SZAQuBpgRu" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
-<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
-:::
-:::
-
-::: {.episode-card}
-[S1 · E5]{.ep-num} [Season Finale]{.ep-tag}
-
-### Chapters 26–30
-
-[Sep 8, 2026 · 41 min]{.ep-meta}
-
-<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1G4gTejPakymYZiw5Jz3Gz?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 5"></iframe>
-
-::: {.episode-links}
-<a href="https://open.spotify.com/episode/1G4gTejPakymYZiw5Jz3Gz" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
-<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
-:::
-:::
-
-:::
-
----
-
-**Want a say in Season 3?** Comment your book suggestions on our [TikTok](https://www.tiktok.com/@babblingbooksclip){target="_blank"}!
