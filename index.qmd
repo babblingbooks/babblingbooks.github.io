@@ -35,7 +35,6 @@ listing:
       <div>
         <h3 class="host__name">Hannah</h3>
         <span class="host__role">Co-host</span>
-        <p class="host__bio">A line about Hannah goes here: favourite genre, comfort read, hot take…</p>
       </div>
     </article>
     <article class="host host--alt">
@@ -43,7 +42,6 @@ listing:
       <div>
         <h3 class="host__name">Patty</h3>
         <span class="host__role">Co-host</span>
-        <p class="host__bio">A line about Patty goes here: favourite genre, comfort read, hot take…</p>
       </div>
     </article>
   </div>
