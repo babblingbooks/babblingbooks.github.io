@@ -1,19 +1,58 @@
 ---
-title: "Welcome to babbling books"
+pagetitle: "babbling books"
 page-layout: full
+toc: false
 ---
 
-<div style="text-align: center; margin-top: 2rem;">
+::: {.hero}
 
-![](images/logo.png){width=70%}
+![](images/logo.png){.hero-logo fig-alt="babbling books logo: two friends toasting with mead and wine over a stack of books"}
 
+[A book club podcast hosted by two best friends who read books together and then chat about them.]{.hero-tagline}
 
-</div>
+[<i class="bi bi-calendar-heart"></i> New episodes every **Sunday at 9pm**]{.schedule-pill}
 
-## About the Podcast
+::: {.hero-buttons}
+<a class="btn-pill btn-spotify" href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Listen on Spotify</a>
+<a class="btn-pill btn-outline" href="episodes.html"><i class="bi bi-collection-play"></i> All episodes</a>
+:::
 
-**babbling books** is a book podcast hosted by two friends who read books together and then chat about them
+:::
 
----
+::: {.home-grid}
 
+::: {.panel .up-next}
+[Up next · Season 2]{.eyebrow}
+
+## House of Earth and Blood
+
+[Crescent City #1 · Sarah J. Maas]{.book-meta}
+
+We're trading spaceships for Crescent City. Grab a copy and read along with us!
+
+[<i class="bi bi-stars"></i> Premieres **Sunday, October 18, 2026** at 9pm]{.premiere}
+:::
+
+::: {.panel}
+[Latest episode]{.eyebrow}
+
+## Project Hail Mary: Season Finale
+
+Chapters 26–30. The Season 1 finale, where we wrap up Andy Weir's *Project Hail Mary*.
+
+<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1G4gTejPakymYZiw5Jz3Gz?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Project Hail Mary Season Finale"></iframe>
+:::
+
+:::
+
+::: {.panel .tiktok-cta}
+## <i class="bi bi-tiktok"></i> Help us pick the next read
+
+Got a book you're dying for us to babble about? Tell us in the comments on our TikTok. We read every suggestion!
+
+<a class="btn-pill btn-tiktok" href="https://www.tiktok.com/@babblingbooksclip" target="_blank" rel="noopener"><i class="bi bi-tiktok"></i> \@babblingbooksclip</a>
+:::
+
+::: {.signoff}
 *huzzah*
+:::

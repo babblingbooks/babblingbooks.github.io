@@ -1,72 +1,51 @@
 [
   {
-    "objectID": "index.html#about-the-podcast",
-    "href": "index.html#about-the-podcast",
-    "title": "Welcome to babbling books",
-    "section": "About the Podcast",
-    "text": "About the Podcast\nbabbling books is a book podcast hosted by two friends who read books together and then chat about them\n\nhuzzah"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "babbling books",
+    "section": "",
+    "text": "A book club podcast hosted by two best friends who read books together and then chat about them.\n New episodes every Sunday at 9pm\n\n Listen on Spotify  All episodes"
+  },
+  {
+    "objectID": "index.html#house-of-earth-and-blood",
+    "href": "index.html#house-of-earth-and-blood",
+    "title": "babbling books",
+    "section": "House of Earth and Blood",
+    "text": "House of Earth and Blood\nCrescent City #1 · Sarah J. Maas\nWe’re trading spaceships for Crescent City. Grab a copy and read along with us!\n Premieres Sunday, October 18, 2026 at 9pm"
+  },
+  {
+    "objectID": "index.html#project-hail-mary-season-finale",
+    "href": "index.html#project-hail-mary-season-finale",
+    "title": "babbling books",
+    "section": "Project Hail Mary: Season Finale",
+    "text": "Project Hail Mary: Season Finale\nChapters 26–30. The Season 1 finale, where we wrap up Andy Weir’s Project Hail Mary."
+  },
+  {
+    "objectID": "index.html#help-us-pick-the-next-read",
+    "href": "index.html#help-us-pick-the-next-read",
+    "title": "babbling books",
+    "section": " Help us pick the next read",
+    "text": "Help us pick the next read\nGot a book you’re dying for us to babble about? Tell us in the comments on our TikTok. We read every suggestion!\n @babblingbooksclip"
   },
   {
     "objectID": "episodes.html",
     "href": "episodes.html",
     "title": "Episodes",
     "section": "",
-    "text": "Welcome to the babbling books library! Here you’ll find every episode we’ve released, what chapters we covered, and where to listen."
+    "text": "Welcome to the babbling books library! Here you’ll find every episode we’ve released, which chapters we covered, and where to listen. New episodes drop every Sunday at 9pm."
   },
   {
-    "objectID": "episodes.html#available-episodes",
-    "href": "episodes.html#available-episodes",
+    "objectID": "episodes.html#season-2-house-of-earth-and-blood",
+    "href": "episodes.html#season-2-house-of-earth-and-blood",
     "title": "Episodes",
-    "section": "🎙️ Available Episodes",
-    "text": "🎙️ Available Episodes\n\n\n\nEpisode 1\n\n\nProject Hail Mary\nChapters Covered: 1–5\n\n  \n  \n\n\n\n\n\nEpisode 2\n\n\nProject Hail Mary\nChapters Covered: 6–10\n\n  \n  \n\n\n\n\n\nEpisode 3\n\n\nProject Hail Mary\nChapters Covered: 11–15"
+    "section": "🔮 Season 2: House of Earth and Blood",
+    "text": "🔮 Season 2: House of Earth and Blood\n\nPremieres Sunday, October 18, 2026 · 9pm\n\nHouse of Earth and Blood\nCrescent City #1 · Sarah J. Maas\nOur second book club pick! Start reading now and catch up with us on premiere night."
   },
   {
-    "objectID": "episodes.html#project-hail-mary",
-    "href": "episodes.html#project-hail-mary",
+    "objectID": "episodes.html#season-1-project-hail-mary",
+    "href": "episodes.html#season-1-project-hail-mary",
     "title": "Episodes",
-    "section": "Project Hail Mary",
-    "text": "Project Hail Mary\nChapters Covered: 1–5"
-  },
-  {
-    "objectID": "episodes.html#project-hail-mary-1",
-    "href": "episodes.html#project-hail-mary-1",
-    "title": "Episodes",
-    "section": "Project Hail Mary",
-    "text": "Project Hail Mary\nChapters Covered: 6–10"
-  },
-  {
-    "objectID": "episodes.html#project-hail-mary-2",
-    "href": "episodes.html#project-hail-mary-2",
-    "title": "Episodes",
-    "section": "Project Hail Mary",
-    "text": "Project Hail Mary\nChapters Covered: 11–15"
-  },
-  {
-    "objectID": "episodes.html#coming-soon",
-    "href": "episodes.html#coming-soon",
-    "title": "Episodes",
-    "section": "🔮 Coming Soon",
-    "text": "🔮 Coming Soon\n\n\n\nEpisode 4\n\n\nProject Hail Mary\nPlanned Chapters: 16–20\nComing soon!\n\n\n\n\nEpisode 5\n\n\nProject Hail Mary\nPlanned Chapters: 21–25\nComing soon!\n\n\n\n\nEpisode 6\n\n\nProject Hail Mary\nPlanned Chapters: 26–30\nComing soon!"
-  },
-  {
-    "objectID": "episodes.html#project-hail-mary-3",
-    "href": "episodes.html#project-hail-mary-3",
-    "title": "Episodes",
-    "section": "Project Hail Mary",
-    "text": "Project Hail Mary\nPlanned Chapters: 16–20\nComing soon!"
-  },
-  {
-    "objectID": "episodes.html#project-hail-mary-4",
-    "href": "episodes.html#project-hail-mary-4",
-    "title": "Episodes",
-    "section": "Project Hail Mary",
-    "text": "Project Hail Mary\nPlanned Chapters: 21–25\nComing soon!"
-  },
-  {
-    "objectID": "episodes.html#project-hail-mary-5",
-    "href": "episodes.html#project-hail-mary-5",
-    "title": "Episodes",
-    "section": "Project Hail Mary",
-    "text": "Project Hail Mary\nPlanned Chapters: 26–30\nComing soon!"
+    "section": "🚀 Season 1: Project Hail Mary",
+    "text": "🚀 Season 1: Project Hail Mary\nAndy Weir · 5 episodes · complete\n\n\nS1 · E1\n\nChapters 1–5\nAug 4, 2026 · 49 min\n\n\n\n \n\n\n\n\nS1 · E2\n\nChapters 6–10\nAug 9, 2026 · 44 min\n\n\n\n \n\n\n\n\nS1 · E3\n\nChapters 11–15\nAug 16, 2026 · 44 min\n\n\n\n \n\n\n\n\nS1 · E4 Megasode\n\nChapters 16–25\nAug 31, 2026 · 48 min\n\n\n\n \n\n\n\n\nS1 · E5 Season Finale\n\nChapters 26–30\nSep 8, 2026 · 41 min\n\n\n\n \n\n\n\n\n\nWant a say in Season 3? Comment your book suggestions on our TikTok!"
   }
 ]

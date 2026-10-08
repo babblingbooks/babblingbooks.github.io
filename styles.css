@@ -1,10 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap");
+
+:root {
+    --bb-purple: #a63be5;
+    --bb-purple-deep: #7b2cbf;
+    --bb-lavender: #c88cff;
+    --bb-gold: #e9c46a;
+    --bb-parchment: #f3e5c8;
+    --bb-panel: #1c1426;
+}
+
+/* Home: hero */
+
+.hero {
+    text-align: center;
+    padding: 1.5rem 1rem 2.5rem;
+}
+
+.hero-logo {
+    width: min(340px, 80%);
+    filter: drop-shadow(0 10px 30px rgba(166, 59, 229, .35));
+}
+
+.hero-tagline {
+    display: block;
+    max-width: 34rem;
+    margin: 1.25rem auto 1rem;
+    font-size: 1.2rem;
+    color: var(--bb-parchment);
+}
+
+.schedule-pill {
+    display: inline-block;
+    padding: .35rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--bb-gold);
+    color: var(--bb-gold);
+    font-size: .95rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: 1.5rem;
+}
+
+.hero-buttons p {
+    display: contents;
+}
+
+/* Buttons */
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.btn-pill:hover {
+    transform: translateY(-2px);
+}
+
+.btn-spotify {
+    background: var(--bb-purple);
+    color: white;
+}
+
+.btn-spotify:hover {
+    background: var(--bb-gold);
+    color: #2a1636;
+}
+
+.btn-outline {
+    border: 1px solid var(--bb-lavender);
+    color: var(--bb-lavender);
+}
+
+.btn-outline:hover {
+    background: var(--bb-lavender);
+    color: #2a1636;
+}
+
+.btn-tiktok {
+    background: var(--bb-parchment);
+    color: #2a1636;
+}
+
+.btn-tiktok:hover {
+    background: var(--bb-gold);
+    color: #2a1636;
+}
+
+/* Home: panels */
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 1.5rem;
+}
+
+.panel {
+    background: var(--bb-panel);
+    border: 1px solid #3a2a4d;
+    border-radius: 14px;
+    padding: 1.5rem;
+}
+
+.panel h2 {
+    margin-top: .25rem;
+    border-bottom: none;
+}
+
+.tiktok-cta {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.up-next {
+    border-color: var(--bb-gold);
+    background: linear-gradient(160deg, #2a1636, var(--bb-panel));
+}
+
+.eyebrow {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: .75rem;
+    color: var(--bb-gold);
+}
+
+.book-meta {
+    display: block;
+    color: var(--bb-lavender);
+    font-style: italic;
+    margin-bottom: .75rem;
+}
+
+.premiere {
+    display: block;
+    color: var(--bb-gold);
+}
+
+.signoff {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: var(--bb-lavender);
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 1.3rem;
+}
+
+.spotify-embed {
+    width: 100%;
+    border-radius: 12px;
+    border: 0;
+    margin-top: .75rem;
+}
+
 /* Episode Grid */
 
 .episode-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 1.5rem;
-    margin: 2rem 0;
+    margin: 1.5rem 0 2rem;
 }
 
 /* Released Episodes */
@@ -27,19 +194,48 @@
 .episode-card h2,
 .episode-card h3 {
     color: white;
+    margin-top: .5rem;
+    margin-bottom: .25rem;
 }
 
-.episode-card h2 {
-    margin-bottom: .75rem;
+.ep-num {
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--bb-parchment);
 }
 
-.episode-links {
-    margin-top: 1.5rem;
+.ep-tag {
+    display: inline-block;
+    margin-left: .4rem;
+    padding: .1rem .6rem;
+    border-radius: 999px;
+    background: var(--bb-gold);
+    color: #2a1636;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.ep-meta {
+    display: block;
+    font-size: .9rem;
+    opacity: .85;
+}
+
+.episode-links,
+.episode-links p {
+    margin: 1rem 0 0;
     display: flex;
     gap: 0.75rem;
 }
 
-.episode-links a {
+.episode-links p {
+    margin: 0;
+}
+
+.episode-links a,
+.episode-links .link-soon {
     width: 46px;
     height: 46px;
     display: flex;
@@ -63,12 +259,19 @@
     transform: scale(1.1);
 }
 
+/* Placeholder until the YouTube channel launches */
+.episode-links .link-soon {
+    opacity: .4;
+    cursor: default;
+}
+
 /* Upcoming Episodes */
 
 .episode-card.upcoming {
     background: #222;
     border: 2px solid #7b2cbf;
     color: #ddd;
+    margin: 1rem 0 2rem;
 }
 
 .episode-card.upcoming h2,
@@ -78,4 +281,81 @@
 
 .episode-card.upcoming:hover {
     border-color: #b66af0;
+}
+
+.badge-soft {
+    display: inline-block;
+    padding: .2rem .75rem;
+    border-radius: 999px;
+    border: 1px solid var(--bb-gold);
+    color: var(--bb-gold);
+    font-size: .85rem;
+}
+
+/* Phones */
+
+@media (max-width: 575.98px) {
+    /* Social icons move to the footer so the brand fits on one row */
+    .quarto-navbar-tools {
+        display: none !important;
+    }
+
+    .navbar-title {
+        font-size: 1.15rem;
+    }
+
+    .hero {
+        padding: .5rem 0 1.5rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.05rem;
+    }
+
+    .schedule-pill {
+        font-size: .85rem;
+        padding: .35rem .85rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-pill {
+        justify-content: center;
+    }
+
+    .home-grid,
+    .episode-grid {
+        gap: 1rem;
+    }
+
+    .panel,
+    .episode-card {
+        padding: 1.1rem;
+    }
+
+    .badge-soft {
+        font-size: .78rem;
+        border-radius: 12px;
+    }
+}
+
+/* No hover lift on touch screens */
+
+@media (hover: none) {
+    .episode-card:hover {
+        transform: none;
+    }
+}
+
+/* Footer social icons: big enough to tap */
+
+.nav-footer-right .nav-link {
+    font-size: 1.25rem;
+    padding: .35rem .5rem;
 }

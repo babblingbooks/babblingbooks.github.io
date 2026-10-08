@@ -4,6 +4,7 @@ project:
 
 website:
   title: "babbling books"
+  description: "A book club podcast hosted by two best friends. New episodes every Sunday at 9pm."
   favicon: images/logo.png
   navbar:
     logo: images/logo.png
@@ -12,18 +13,30 @@ website:
         text: Home
       - episodes.qmd
     tools:
+      # YouTube channel not live yet; swap in the real URL once it is
       - icon: youtube
         href: https://www.youtube.com
       - icon: spotify
-        href: https://open.spotify.com
+        href: https://open.spotify.com/show/033YEov0pxocKKkEwuywsy
+      - icon: tiktok
+        href: https://www.tiktok.com/@babblingbooksclip
       - icon: github
         href: https://github.com/babblingbooks
   page-footer:
     center:
-      - text: "© 2026 babbling books"
+      - text: "© 2026 babbling books · new episodes every Sunday at 9pm"
+    right:
+      - icon: spotify
+        href: https://open.spotify.com/show/033YEov0pxocKKkEwuywsy
+      - icon: tiktok
+        href: https://www.tiktok.com/@babblingbooksclip
+      - icon: youtube
+        href: https://www.youtube.com
+      - icon: github
+        href: https://github.com/babblingbooks
 
 format:
   html:
-    theme: cyborg
+    theme: [cyborg, theme.scss]
     css: styles.css
     toc: true

@@ -3,113 +3,103 @@ title: "Episodes"
 toc: true
 ---
 
-Welcome to the **babbling books** library! Here you'll find every episode we've released, what chapters we covered, and where to listen.
+Welcome to the **babbling books** library! Here you'll find every episode we've released, which chapters we covered, and where to listen. New episodes drop every **Sunday at 9pm**.
 
-## 🎙️ Available Episodes
+## 🔮 Season 2: House of Earth and Blood
 
-<div class="episode-grid">
+::: {.episode-card .upcoming}
+[Premieres Sunday, October 18, 2026 · 9pm]{.badge-soft}
 
-<div class="episode-card">
+### House of Earth and Blood
 
-### Episode 1
+[Crescent City #1 · Sarah J. Maas]{.book-meta}
 
-## Project Hail Mary
+Our second book club pick! Start reading now and catch up with us on premiere night.
+:::
 
-**Chapters Covered:** 1–5
+## 🚀 Season 1: Project Hail Mary
 
-<div class="episode-links">
-  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-    <i class="bi bi-youtube"></i>
-  </a>
+[Andy Weir · 5 episodes · complete]{.book-meta}
 
-  <a href="https://spotify.com" target="_blank" aria-label="Spotify">
-    <i class="bi bi-spotify"></i>
-  </a>
-</div>
+::: {.episode-grid}
 
-</div>
+::: {.episode-card}
+[S1 · E1]{.ep-num}
 
-<div class="episode-card">
+### Chapters 1–5
 
-### Episode 2
+[Aug 4, 2026 · 49 min]{.ep-meta}
 
-## Project Hail Mary
+<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/2AwelFVjyOvqOoG0yt82pK?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 1"></iframe>
 
-**Chapters Covered:** 6–10
+::: {.episode-links}
+<a href="https://open.spotify.com/episode/2AwelFVjyOvqOoG0yt82pK" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
+<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
+:::
+:::
 
-<div class="episode-links">
-  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-    <i class="bi bi-youtube"></i>
-  </a>
+::: {.episode-card}
+[S1 · E2]{.ep-num}
 
-  <a href="https://spotify.com" target="_blank" aria-label="Spotify">
-    <i class="bi bi-spotify"></i>
-  </a>
-</div>
-</div>
+### Chapters 6–10
 
-<div class="episode-card">
+[Aug 9, 2026 · 44 min]{.ep-meta}
 
-### Episode 3
+<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/0VSeDnKjhXtsomz73nZ3Dj?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 2"></iframe>
 
-## Project Hail Mary
+::: {.episode-links}
+<a href="https://open.spotify.com/episode/0VSeDnKjhXtsomz73nZ3Dj" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
+<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
+:::
+:::
 
-**Chapters Covered:** 11–15
+::: {.episode-card}
+[S1 · E3]{.ep-num}
 
-<div class="episode-links">
-  <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-    <i class="bi bi-youtube"></i>
-  </a>
+### Chapters 11–15
 
-  <a href="https://spotify.com" target="_blank" aria-label="Spotify">
-    <i class="bi bi-spotify"></i>
-  </a>
-</div>
+[Aug 16, 2026 · 44 min]{.ep-meta}
 
-</div>
+<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1XZBuZaDdNiqMOVHID3WQf?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 3"></iframe>
 
-</div>
+::: {.episode-links}
+<a href="https://open.spotify.com/episode/1XZBuZaDdNiqMOVHID3WQf" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
+<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
+:::
+:::
+
+::: {.episode-card}
+[S1 · E4]{.ep-num} [Megasode]{.ep-tag}
+
+### Chapters 16–25
+
+[Aug 31, 2026 · 48 min]{.ep-meta}
+
+<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/5jZBbvpASbN0SZAQuBpgRu?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 4"></iframe>
+
+::: {.episode-links}
+<a href="https://open.spotify.com/episode/5jZBbvpASbN0SZAQuBpgRu" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
+<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
+:::
+:::
+
+::: {.episode-card}
+[S1 · E5]{.ep-num} [Season Finale]{.ep-tag}
+
+### Chapters 26–30
+
+[Sep 8, 2026 · 41 min]{.ep-meta}
+
+<iframe class="spotify-embed" src="https://open.spotify.com/embed/episode/1G4gTejPakymYZiw5Jz3Gz?utm_source=generator&theme=0" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Spotify player: Season 1 Episode 5"></iframe>
+
+::: {.episode-links}
+<a href="https://open.spotify.com/episode/1G4gTejPakymYZiw5Jz3Gz" target="_blank" rel="noopener" aria-label="Listen on Spotify"><i class="bi bi-spotify"></i></a>
+<span class="link-soon" title="YouTube coming soon" aria-label="YouTube coming soon"><i class="bi bi-youtube"></i></span>
+:::
+:::
+
+:::
 
 ---
 
-## 🔮 Coming Soon
-
-<div class="episode-grid">
-
-<div class="episode-card upcoming">
-
-### Episode 4
-
-## Project Hail Mary
-
-**Planned Chapters:** 16–20
-
-*Coming soon!*
-
-</div>
-
-<div class="episode-card upcoming">
-
-### Episode 5
-
-## Project Hail Mary
-
-**Planned Chapters:** 21–25
-
-*Coming soon!*
-
-</div>
-
-<div class="episode-card upcoming">
-
-### Episode 6
-
-## Project Hail Mary
-
-**Planned Chapters:** 26–30
-
-*Coming soon!*
-
-</div>
-
-</div>
+**Want a say in Season 3?** Comment your book suggestions on our [TikTok](https://www.tiktok.com/@babblingbooksclip){target="_blank"}!
