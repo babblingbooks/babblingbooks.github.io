@@ -818,6 +818,19 @@ a {
 
 .book--crescent .book__face { z-index: 1; }
 
+/* A Court of Splintered Harmony: starlit night court, silver stars */
+.book--court {
+    background:
+        radial-gradient(circle at 68% 22%, #f1ecff 0 2%, rgba(200, 190, 255, .45) 3%, transparent 12%),
+        radial-gradient(1px 1px at 22% 14%, white, transparent),
+        radial-gradient(1px 1px at 45% 34%, white, transparent),
+        radial-gradient(1px 1px at 82% 48%, white, transparent),
+        radial-gradient(1px 1px at 34% 58%, white, transparent),
+        linear-gradient(170deg, #241a4d, #130d2e 55%, #08051a);
+}
+
+.book--court .book__title { color: #d9d2ff; }
+
 /* ---------- Episodes page ---------- */
 
 .page-head {

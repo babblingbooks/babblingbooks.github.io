@@ -20,13 +20,42 @@
 
 - type: season
   season: 2
-  title: "House of Earth and Blood"
-  series: "Crescent City #1"
+  title: "A Court of Splintered Harmony"
   author: "Sarah J. Maas"
-  chapters: 97
-  epilogue: true
-  premiere: 2026-10-18
-  cover: crescent
+  premiere: 2026-11-08
+  cover: court
+
+- type: episode
+  season: 2
+  episode: 3
+  title: "Chapters 16–24"
+  chapters: [16, 24]
+  released:
+  length:
+  spotify:
+  youtube:
+
+- type: episode
+  season: 2
+  episode: 2
+  title: "Chapters 6–15"
+  chapters: [6, 15]
+  released:
+  length:
+  spotify:
+  youtube:
+
+# Episode 1 opens with the bonus chapters from the back of the book
+# (Azriel, Cassian & Nesta, Rhys and Feyre), then the Prelude
+- type: episode
+  season: 2
+  episode: 1
+  title: "Bonus Chapters, Prelude & Chapters 1–5"
+  chapters: [1, 5]
+  released: 2026-11-08
+  length:
+  spotify:
+  youtube:
 
 # ---------------------------------------------------------------- Season 1
 
