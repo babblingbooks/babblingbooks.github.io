@@ -32,7 +32,7 @@ html {
 
 body {
     background:
-        radial-gradient(120% 60% at 50% -10%, rgba(142, 63, 208, .22), transparent 60%),
+        radial-gradient(120% 60% at 50% -10%, rgba(142, 63, 208, .22), transparent 60%) top / 100% 100vh no-repeat,
         var(--ink);
     color: var(--text);
     min-height: 100vh;

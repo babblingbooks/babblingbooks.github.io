@@ -16,6 +16,7 @@ listing:
   <span class="chip"><i class="bi bi-moon-stars-fill"></i> New episodes every Sunday · 9pm</span>
   <div class="hero__actions">
     <a class="btn btn--primary" href="https://open.spotify.com/show/033YEov0pxocKKkEwuywsy" target="_blank" rel="noopener"><i class="bi bi-spotify"></i> Listen on Spotify</a>
+    <a class="btn btn--ghost" href="https://www.youtube.com/@BabblingBooksPodcast" target="_blank" rel="noopener"><i class="bi bi-youtube"></i> Watch on YouTube</a>
     <a class="btn btn--ghost" href="episodes.html"><i class="bi bi-collection-play"></i> Browse episodes</a>
   </div>
 </section>
