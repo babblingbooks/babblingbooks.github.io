@@ -383,6 +383,8 @@ a {
     position: relative;
     width: min(240px, 62vw);
     height: auto;
+    margin-top: 1.25rem;
+    border-radius: 18px;
     filter: drop-shadow(0 16px 30px rgba(0, 0, 0, .5));
     animation: float 6s ease-in-out infinite;
 }

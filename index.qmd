@@ -10,7 +10,7 @@ listing:
 ```{=html}
 <section class="hero">
   <div class="hero__glow" aria-hidden="true"></div>
-  <img class="hero__logo" src="images/logo.png" alt="babbling books logo: two friends toasting with mead and wine over a stack of books">
+  <img class="hero__logo" src="images/cover.jpg" alt="babbling books with Hannah and Patty: the two hosts in a misty dark forest">
   <h1 class="hero__title">Two best friends.<br>One book.<br><em>So much babbling.</em></h1>
   <p class="hero__sub">A book club podcast with best friends Hannah and Patty. We read a few chapters at a time, then sit down and talk about everything that happened.</p>
   <span class="chip"><i class="bi bi-moon-stars-fill"></i> New episodes every Sunday · 9pm</span>

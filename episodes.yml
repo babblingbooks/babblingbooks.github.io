@@ -13,7 +13,7 @@
 #   released           YYYY-MM-DD
 #   length             minutes
 #   spotify            episode link (leave blank until it's out)
-#   youtube            episode link (leave blank until the channel is live)
+#   youtube            episode link (leave blank until the video is up)
 #   tag                optional little badge, e.g. Megasode or Season Finale
 
 # ---------------------------------------------------------------- Season 2
@@ -53,9 +53,9 @@
   title: "Bonus Chapters, Prelude & Chapters 1–5"
   chapters: [1, 5]
   released: 2026-11-08
-  length:
-  spotify:
-  youtube:
+  length: 46
+  spotify: https://open.spotify.com/episode/22q1kedZkycgJvieB6JDoF
+  youtube: https://www.youtube.com/watch?v=6aGGwzPp3Ns
 
 # ---------------------------------------------------------------- Season 1
 
@@ -85,7 +85,7 @@
   released: 2026-08-31
   length: 48
   spotify: https://open.spotify.com/episode/5jZBbvpASbN0SZAQuBpgRu
-  youtube:
+  youtube: https://www.youtube.com/watch?v=E8JVGfYMBHE
   tag: Megasode
 
 - type: episode
@@ -96,7 +96,7 @@
   released: 2026-08-16
   length: 44
   spotify: https://open.spotify.com/episode/1XZBuZaDdNiqMOVHID3WQf
-  youtube:
+  youtube: https://www.youtube.com/watch?v=4qSKMZa8VdU
 
 - type: episode
   season: 1
@@ -106,7 +106,7 @@
   released: 2026-08-09
   length: 44
   spotify: https://open.spotify.com/episode/0VSeDnKjhXtsomz73nZ3Dj
-  youtube:
+  youtube: https://www.youtube.com/watch?v=PHB8mlIIwHc
 
 - type: episode
   season: 1

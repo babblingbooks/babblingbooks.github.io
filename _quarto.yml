@@ -8,7 +8,7 @@ project:
 website:
   title: "babbling books"
   description: "A book club podcast with best friends Hannah and Patty. New episodes every Sunday at 9pm."
-  favicon: images/logo.png
+  favicon: images/icon.png
   site-url: https://babbling-books.com
   open-graph: true
 
